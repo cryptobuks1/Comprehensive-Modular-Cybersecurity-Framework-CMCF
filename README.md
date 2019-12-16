@@ -22,6 +22,13 @@ The frameworks under consideration for evaluation
 * MITRE
 * ENISA
 * CVE
+* OWASP
 
 Artifacts are gathere via open online resources.
 All copyright information pertaining to the informataion supplied within the collected artifact remains the property of the orginal author.
+
+Goal of the project is to develop a framework that draws bi-directional lines between the following cybersecurity levels:
+
+* Strategic
+* Operational
+* Tactical
