@@ -38,11 +38,11 @@ Which means:
 	The blocks are based on the ISAC organizations (i.e. automotive isac, avaiation isac, electricity isac, etc.)
 
 List of Blocks
-	CMCF Block-AU (Automotive)
-	CMCF Block-A (Aviation)
-	CMCF Block-C (Communications)
-	CMCF Block-DNG (Downstream Natural Gas)
-	CMCF Block-EI (Elections Infrastructure)
+	*CMCF Block-AU (Automotive)
+	*CMCF Block-A (Aviation)
+	*CMCF Block-C (Communications)
+	*CMCF Block-DNG (Downstream Natural Gas)
+	*CMCF Block-EI (Elections Infrastructure)
 	CMCF Block-E (Electricity)
 	CMCF Block-EMR (Emergency Management and Response)
 	CMCF Block-FS (Financial Services)
