@@ -37,28 +37,30 @@ This means that you could have
 Which means:
 	The blocks are based on the ISAC organizations (i.e. automotive isac, avaiation isac, electricity isac, etc.)
 
-List of Blocks
-	* CMCF Block-AU (Automotive)
-	* CMCF Block-A (Aviation)
-	* CMCF Block-C (Communications)
-	* CMCF Block-DNG (Downstream Natural Gas)
-	* CMCF Block-EI (Elections Infrastructure)
-	* CMCF Block-E (Electricity)
-	* CMCF Block-EMR (Emergency Management and Response)
-	* CMCF Block-FS (Financial Services)
-	* CMCF Block-H (Healthcare) >> Proof of Concept MISP Implementation
-	* CMCF Block-HR (Healthcare Ready)
-	* CMCF Block-IT (Information Technology)
-	* CMCF Block-M (Maritime)
-	* CMCF Block-ME (Media and Entertainment)
-	* CMCF Block-MS (Multi-State)
-	* CMCF Block-ND (National Defense)
-	* CMCF Block-ON (Oil and Natural Gas)
-	* CMCF Block-R (Realestate)
-	* CMCF Block-RE (Research and Education)
-	* CMCF Block-RH (Retail and Hospitality)
-	* CMCF Block-SPTO (Surface Transporation, Public Transportation, and Over-the-Road Bus)
-	* CMCF Block-W (Water)
+
+List of Possible Blocks
+
+* CMCF Block-AU (Automotive)
+* CMCF Block-A (Aviation)
+* CMCF Block-C (Communications)
+* CMCF Block-DNG (Downstream Natural Gas)
+* CMCF Block-EI (Elections Infrastructure)
+* CMCF Block-E (Electricity)
+* CMCF Block-EMR (Emergency Management and Response)
+* CMCF Block-FS (Financial Services)
+* CMCF Block-H (Healthcare) >> Proof of Concept MISP Implementation
+* CMCF Block-HR (Healthcare Ready)
+* CMCF Block-IT (Information Technology)
+* CMCF Block-M (Maritime)
+* CMCF Block-ME (Media and Entertainment)
+* CMCF Block-MS (Multi-State)
+* CMCF Block-ND (National Defense)
+* CMCF Block-ON (Oil and Natural Gas)
+* CMCF Block-R (Realestate)
+* CMCF Block-RE (Research and Education)
+* CMCF Block-RH (Retail and Hospitality)
+* CMCF Block-SPTO (Surface Transporation, Public Transportation, and Over-the-Road Bus)
+* CMCF Block-W (Water)
 
 The following artifacts are found within the osrs-event-type MISP taxonomy are under conisderation for research:
 
