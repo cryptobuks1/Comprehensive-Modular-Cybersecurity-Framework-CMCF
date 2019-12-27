@@ -62,11 +62,48 @@ Block H
     
 Combined Ops Framework
     Environmental Threat
+      OSRS Operational Framework Environmental Threat: HITRUST PFC1 Drought
+      OSRS Operational Framework Environmental Threat: ENISA Disaster
     Failure Threat
+      OSRS Operational Framework Failure Threat: HITRUST LUF1 3rd Party Services
+      OSRS Operational Framework Failure Threat: ENISA Failure of Devices or Systems
     Organizationl Threat
+      OSRS Operational Framework Organizationl Threat: HITRUST OCC1 Civil
+      OSRS Operational Framework Organizationl Threat: ENISA Violation of Laws or Regulations OR Breach of Legislation
     Existential Threat
+      OSRS Operational Framework Existential Threat: HITRUST LIC4 Warfare
+      OSRS Operational Framework Existential Threat: ENISA Fraud
     Human Threat
+      OSRS Operational Framework Human Threat: HITRUST LIC1 Sabotage
+      OSRS Operational Framework Human Threat: ENISA Information Leakage OR Sharing Due to Human Error
     Nefarious Threat
+      OSRS Operational Framework Nefarious Threat: HITRUST LIN1 Abuse of Authorizations
+      OSRS Operational Framework Nefarious Threat: ENISA War Driving
+
+
+MITRE Pre-ATK
+    Priority Definition Planning
+      OSRS MITRE Pre-ATK Priority Definition Planning: T1236 Assess current holdings, needs, and wants
+    Priority Definition Direction
+      OSRS MITRE Pre-ATK Priority Definition Direction: T1238 Assign KITs, KIQs, and(or) intelligence requirements
+    Target Selection
+      OSRS MITRE Pre-ATK Target Selection: T1245 Determine approach OR attack vector
+    Technical Information Gathering
+      OSRS MITRE Pre-ATK Technical Information Gathering: T1247 Acquire OSINT data sets and information
+    People Information Gathering
+      OSRS MITRE Pre-ATK People Information Gathering: T1266 Acquire OSINT data sets and information
+    Organizational Information Gathering
+      OSRS MITRE Pre-ATK Organizational Information Gathering: T1277 Acquire OSINT data sets and information
+    Technical Weakness Identification
+      OSRS MITRE Pre-ATK Technical Weakness Identification: T1293 Analyze application security posture
+    People Weakness Identification
+    Organizational Weakness Identification
+    Adversary OPSEC
+    Establish & Maintain Infrastructure
+    Persona Development
+    Build Capabilities
+    Test Capabilities
+    Stage Capabilities
     
     
     
