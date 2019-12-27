@@ -19,8 +19,11 @@ General Artifact
   Vulnerability Source
     OSRS OSINT Vulnerability Source: Bugtraq
   OSINT Author
+    OSRS OSINT Author Index: Aaron Riley
   Exploit Author
+    OSRS Exploit Author Index: 08Tc3wBB
   CVE Author
+    OSRS CVE Author Index: Aaron Bishop
   
   
 
