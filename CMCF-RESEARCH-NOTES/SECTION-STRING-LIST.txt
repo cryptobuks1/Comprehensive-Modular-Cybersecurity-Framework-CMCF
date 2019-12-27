@@ -1,0 +1,27 @@
+General Artifact
+  Artifact Type
+    OSRS Artifact Type: Backdoor
+  GDBI
+    OSRS GDBI: Business-Email-Compromise(BEC)
+  GECI
+    OSRS GECI: Federal Administration
+  US State Index
+    OSRS US State Index: Alabama, AL
+  BLS A thru P
+    OSRS BLS: NAICS 721 Accommodation
+  BLS Q thru Z
+    OSRS BLS: NAICS 482 Rail Transportation
+    
+    
+ Author Source
+  OSINT Source
+    OSRS OSINT Source: 360 Netlab Blog
+  Vulnerability Source
+    OSRS OSINT Vulnerability Source: Bugtraq
+  OSINT Author
+  Exploit Author
+  CVE Author
+  
+  
+
+
