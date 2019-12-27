@@ -24,7 +24,30 @@ General Artifact
     OSRS Exploit Author Index: 08Tc3wBB
   CVE Author
     OSRS CVE Author Index: Aaron Bishop
-  
+
+Block H
+    Risk Management Program
+      OSRS HITRUST CSF Risk Mgmt Program: 0.a Risk Management Framework
+    Information Protection Policy
+      OSRS HITRUST CSF Information Protection Policy: 01.a Policies for Information Security
+    Information Protection Organization
+      OSRS HITRUST CSF Information Protection Organization: 02.a Information Security Roles and Responsibilities
+    Human Resources
+      OSRS HITRUST CSF Human Resources: 03.a Screening
+    Asset Management
+      OSRS HITRUST CSF Asset Management: 04.a Inventory of Assets
+    Access Control
+    Cryptography
+    Physical AND Environmental Protection
+    Operations
+    Communications
+    System Acquisition AND Development
+    Supply Chain
+    Incident Management
+    Business Continuity
+    Compliance
+    Privacy
+
   
 
 
