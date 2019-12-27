@@ -37,16 +37,41 @@ Block H
     Asset Management
       OSRS HITRUST CSF Asset Management: 04.a Inventory of Assets
     Access Control
+      OSRS HITRUST CSF Access Control: 05.a Risk Management Framework
     Cryptography
+      OSRS HITRUST CSF Cryptography: 06.a Use of Cryptographic Controls
     Physical AND Environmental Protection
+      OSRS HITRUST CSF Physical AND Environmental Protection: 07.a Physical Security Perimeter
     Operations
+      OSRS HITRUST CSF Operations: 08.a Documented Operating Procedures
     Communications
+      OSRS HITRUST CSF Communications: 09.a Network Controls
     System Acquisition AND Development
+      OSRS HITRUST CSF System Acquisition AND Development: 10.a Information Security Requirements Analysis and Specification
     Supply Chain
+      OSRS HITRUST CSF Supply Chain: 11.a Information Security in Supplier Relationships
     Incident Management
+      OSRS HITRUST CSF Incident Management: 12.a Incident Management Program
     Business Continuity
+      OSRS HITRUST CSF Business Continuity: 13.a Planning Information Security Continuity
     Compliance
+      OSRS HITRUST CSF Compliance: 14.a Identification of Applicable Legislation and Contractual Requirements
     Privacy
+      OSRS HITRUST CSF Privacy: 15.a Privacy Notice
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
   
 
