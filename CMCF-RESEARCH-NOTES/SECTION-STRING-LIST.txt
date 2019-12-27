@@ -97,11 +97,17 @@ MITRE Pre-ATK
     Technical Weakness Identification
       OSRS MITRE Pre-ATK Technical Weakness Identification: T1293 Analyze application security posture
     People Weakness Identification
+      OSRS MITRE Pre-ATK People Weakness Identification: T1297 Analyze organizational skillsets and deficiencies
     Organizational Weakness Identification
+      OSRS MITRE Pre-ATK Organizational Weakness Identification: T1301 Analyze business processes
     Adversary OPSEC
+      OSRS MITRE Pre-ATK Adversary OPSEC: T1307 Acquire and (or) use 3rd party infrastructure services
     Establish & Maintain Infrastructure
+      OSRS MITRE Pre-ATK Establish & Maintain Infrastructure: T1329 Acquire and (or) use 3rd party infrastructure services
     Persona Development
+      OSRS MITRE Pre-ATK Persona Development: T1341 Build social network persona
     Build Capabilities
+      OSRS MITRE Pre-ATK Build Capabilities: T1347 Build and configure delivery systems
     Test Capabilities
     Stage Capabilities
     
