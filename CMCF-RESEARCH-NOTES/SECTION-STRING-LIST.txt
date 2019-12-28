@@ -172,6 +172,8 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Collection Azure: T1530 Data from Cloud Storage Object
       OSRS Combined MITRE ATK Collection SaaS: T1213 Data from Information Repositories
     Command and Control
+      OSRS Combined MITRE ATK Command and Control Windows: T1043 Commonly Used Port
+      OSRS Combined MITRE ATK Command and Control Linux: T1043 Commonly Used Port
     Exfiltration
     Impact
     
