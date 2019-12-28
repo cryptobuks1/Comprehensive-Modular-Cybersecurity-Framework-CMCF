@@ -154,6 +154,12 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Credential Access Azure: T1098 Account Manipulation
       OSRS Combined MITRE ATK Credential Access SaaS: T1110 Brute Force
     Discovery
+      OSRS Combined MITRE ATK Discovery Windows: T1087 Account Discovery
+      OSRS Combined MITRE ATK Discovery Linux: T1087 Account Discovery
+      OSRS Combined MITRE ATK Discovery AWS: T1538 Cloud Service Dashboard
+      OSRS Combined MITRE ATK Discovery GCP: T1538 Cloud Service Dashboard
+      OSRS Combined MITRE ATK Discovery Azure: T1538 Cloud Service Dashboard
+      OSRS Combined MITRE ATK Discovery SaaS: T1526 Cloud Service Discovery
     Lateral Movement
     Collection
     Command and Control
