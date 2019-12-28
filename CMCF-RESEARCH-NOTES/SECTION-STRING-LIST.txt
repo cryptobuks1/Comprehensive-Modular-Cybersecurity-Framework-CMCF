@@ -214,6 +214,24 @@ OSRS SecTools
       OSRS SecTool: checkm8
     SecTool Type
       OSRS SecTool Type: Account Control
+      
+Info Drawbacks
+    General Artifact
+      OSRS CMCF General Artifact Informational Drawback: Information Discrepancy
+    Author Source
+      OSRS CMCF Author Source Informational Drawback: Information Discrepancy
+    Block-H
+      OSRS CMCF Block-H Informational Drawback: Information Discrepancy
+    Ops Framework
+      OSRS CMCF Ops Framework Informational Drawback: Information Discrepancy
+    MITRE
+      OSRS CMCF MITRE Informational Drawback: Information Discrepancy
+    CWE-Exploit DB
+      OSRS CMCF CWE-Exploit DB Informational Drawback: Information Discrepancy
+    MalTech
+      OSRS CMCF MalTech Informational Drawback: Information Discrepancy
+    SecTool
+      OSRS CMCF SecTool Informational Drawback: Information Discrepancy
     
     
     
