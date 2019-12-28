@@ -195,6 +195,13 @@ CWE Exploit DB
       OSRS Exploit DB Platform: ASPX
     
     
+OSRS Maltech
+    Actors & Campaigns
+      OSRS Actors AND Campaigns: -TMT-
+    Backdoor
+    Botnet
+    Ransomware
+    Tool
     
     
     
