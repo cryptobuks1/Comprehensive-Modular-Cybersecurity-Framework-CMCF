@@ -109,7 +109,13 @@ MITRE Pre-ATK
     Build Capabilities
       OSRS MITRE Pre-ATK Build Capabilities: T1347 Build and configure delivery systems
     Test Capabilities
+      OSRS MITRE Pre-ATK Test Capabilities: T1358 Review logs and residual traces
     Stage Capabilities
+      OSRS MITRE Pre-ATK Stage Capabilities: T1379 Disseminate removable media
+      
+      
+Combined MITRE ATK
+
     
     
     
