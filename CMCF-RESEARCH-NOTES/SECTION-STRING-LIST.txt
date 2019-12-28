@@ -181,6 +181,11 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Exfiltration GCP: T1537 Transfer Data to Cloud Account
       OSRS Combined MITRE ATK Exfiltration Azure: T1537 Transfer Data to Cloud Account
     Impact
+      OSRS Combined MITRE ATK Impact Windows: T1531 Account Access Removal
+      OSRS Combined MITRE ATK Impact Linux: T1531 Account Access Removal
+      OSRS Combined MITRE ATK Impact AWS: T1496 Resource Hijacking
+      OSRS Combined MITRE ATK Impact GCP: T1496 Resource Hijacking
+      OSRS Combined MITRE ATK Impact Azure: T1496 Resource Hijacking
     
     
     
