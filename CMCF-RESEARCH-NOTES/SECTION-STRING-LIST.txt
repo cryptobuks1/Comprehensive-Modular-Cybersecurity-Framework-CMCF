@@ -211,7 +211,9 @@ OSRS SecTools
     SecTool A thru P
       OSRS SecTool: .NET Reactor
     SecTool Q thru String
+      OSRS SecTool: checkm8
     SecTool Type
+      OSRS SecTool Type: Account Control
     
     
     
