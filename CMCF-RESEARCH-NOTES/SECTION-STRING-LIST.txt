@@ -199,9 +199,18 @@ OSRS Maltech
     Actors & Campaigns
       OSRS Actors AND Campaigns: -TMT-
     Backdoor
+      OSRS Backdoor: ACBackdoor
     Botnet
+      OSRS Botnet: AESDDoS.J
     Ransomware
+      OSRS Ransomware: Anatova
     Tool
+      OSRS Tool: .NET RocketMan Trojan
+      
+OSRS SecTools
+    SecTool A thru P
+    SecTool Q thru String
+    SecTool Type
     
     
     
