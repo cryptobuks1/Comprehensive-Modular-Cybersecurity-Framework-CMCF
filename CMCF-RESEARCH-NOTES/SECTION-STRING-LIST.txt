@@ -140,6 +140,12 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Privilege Escalation Azure: T1078 Valid Accounts
       OSRS Combined MITRE ATK Privilege Escalation SaaS: T1078 Valid Accounts
     Defense Evasion
+      OSRS Combined MITRE ATK Defense Evasion Windows: T1134 Access Token Manipulation
+      OSRS Combined MITRE ATK Defense Evasion Linux: T1009 Binary Padding
+      OSRS Combined MITRE ATK Defense Evasion AWS: T1108 Redundant Access
+      OSRS Combined MITRE ATK Defense Evasion GCP: T1108 Redundant Access
+      OSRS Combined MITRE ATK Defense Evasion Azure: T1108 Redundant Access
+      OSRS Combined MITRE ATK Defense Evasion SaaS: T1527 Application Access Token
     Credential Access
     Discovery
     Lateral Movement
