@@ -187,7 +187,12 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Impact GCP: T1496 Resource Hijacking
       OSRS Combined MITRE ATK Impact Azure: T1496 Resource Hijacking
     
-    
+CWE Exploit DB
+    CWE
+      OSRS CWE: CWE-128 Wrap-around Error
+      OSRS Exploit DB Type: Type Confusion
+      OSRS Exploit DB Verification: Not Verified
+      OSRS Exploit DB Platform: ASPX
     
     
     
