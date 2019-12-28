@@ -209,6 +209,7 @@ OSRS Maltech
       
 OSRS SecTools
     SecTool A thru P
+      OSRS SecTool: .NET Reactor
     SecTool Q thru String
     SecTool Type
     
