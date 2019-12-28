@@ -147,6 +147,12 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Defense Evasion Azure: T1108 Redundant Access
       OSRS Combined MITRE ATK Defense Evasion SaaS: T1527 Application Access Token
     Credential Access
+      OSRS Combined MITRE ATK Credential Access Windows: T1098 Account Manipulation
+      OSRS Combined MITRE ATK Credential Access Linux: T1139 Bash History
+      OSRS Combined MITRE ATK Credential Access AWS: T1098 Account Manipulation
+      OSRS Combined MITRE ATK Credential Access GCP: T1098 Account Manipulation
+      OSRS Combined MITRE ATK Credential Access Azure: T1098 Account Manipulation
+      OSRS Combined MITRE ATK Credential Access SaaS: T1110 Brute Force
     Discovery
     Lateral Movement
     Collection
