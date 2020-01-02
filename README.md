@@ -85,7 +85,7 @@ The frameworks under consideration for evaluation
 * HITRUST
 * MITRE
 * ENISA
-* CVE
+* CWE
 
 
 Goal of the project is to develop a framework that draws bi-directional lines between the following cybersecurity levels:
