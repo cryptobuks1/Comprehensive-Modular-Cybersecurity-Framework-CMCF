@@ -116,22 +116,22 @@ MITRE Pre-ATK
       
 Combined MITRE ATK
     Initial Access
-      OSRS Combined MITRE ATK Initial Access Windows: T1189 Drive-by Compromise
-      OSRS Combined MITRE ATK Initial Access Linux: T1189 Drive-by Compromise
-      OSRS Combined MITRE ATK Initial Access AWS: T1190 Exploit Public-Facing Application
-      OSRS Combined MITRE ATK Initial Access GCP: T1190 Exploit Public-Facing Application
-      OSRS Combined MITRE ATK Initial Access Azure: T1190 Exploit Public-Facing Application
+      OSRS Combined MITRE ATK Initial Access: Windows T1189 Drive-by Compromise
+      OSRS Combined MITRE ATK Initial Access: Linux T1189 Drive-by Compromise
+      OSRS Combined MITRE ATK Initial Access: AWS T1190 Exploit Public-Facing Application
+      OSRS Combined MITRE ATK Initial Access: GCP T1190 Exploit Public-Facing Application
+      OSRS Combined MITRE ATK Initial Access: Azure T1190 Exploit Public-Facing Application
       OSRS Combined MITRE ATK Initial Access SaaS: T1189 Drive-by Compromise
     Execution
-      OSRS Combined MITRE ATK Execution Windows: T1191 CMSTP
-      OSRS Combined MITRE ATK Execution Linux: T1059 Command-Line Interface
+      OSRS Combined MITRE ATK Execution: Windows T1191 CMSTP
+      OSRS Combined MITRE ATK Execution: Linux T1203 Exploitation for Client Execution
     Persistence
-      OSRS Combined MITRE ATK Persistence Windows: T1015 Accessibility Features
-      OSRS Combined MITRE ATK Persistence Linux: T1156 .bash_profile and .bashrc
-      OSRS Combined MITRE ATK Persistence AWS: T1098 Account Manipulation
-      OSRS Combined MITRE ATK Persistence GCP: T1098 Account Manipulation
-      OSRS Combined MITRE ATK Persistence Azure: T1098 Account Manipulation
-      OSRS Combined MITRE ATK Persistence SaaS: T1108 Redundant Access
+      OSRS Combined MITRE ATK Persistence: Windows T1015 Accessibility Features
+      OSRS Combined MITRE ATK Persistence: Linux T1156 .bash_profile and .bashrc
+      OSRS Combined MITRE ATK Persistence: AWS T1098 Account Manipulation
+      OSRS Combined MITRE ATK Persistence: GCP T1098 Account Manipulation
+      OSRS Combined MITRE ATK Persistence: Azure T1098 Account Manipulation
+      OSRS Combined MITRE ATK Persistence: SaaS T1078 Valid Accounts
     Privilege Escalation
       OSRS Combined MITRE ATK Privilege Escalation Windows: T1134 Access Token Manipulation
       OSRS Combined MITRE ATK Privilege Escalation Linux: T1068 Exploitation for Privilege Escalation
