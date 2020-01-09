@@ -1,0 +1,35 @@
+SEARCH WITH TWO DIFFERENT STRINGS
+
+| mispgetevent misp_instance=RESOURCE1 last=2d
+| search misp_tag="misp-galaxy:OSRS-CMCF-BLOCK-H=\"OSRS Artifact Type:*\"" AND misp_tag="misp-galaxy:OSRS-CMCF-BLOCK-H=\"OSRS GDBI:*\""
+| table misp_tag
+
+RESULTS
+
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Artifact Type: Botnet"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS GDBI: Cause Unknown"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS GECI: Federal Civil Service"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS US State Index: California, CA"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS BLS: NAICS 114 Fishing, Hunting and Trapping"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS BLS: NAICS 314 Textile Product Mills"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS HITRUST CSF Human Resources: 03.f Termination or Change of Employment Responsibilities"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS HITRUST CSF Information Protection Organization: 02.e Information Security in Project Management"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS HITRUST CSF Information Protection Policy: 01.b Review of the Policies for Information Security"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS HITRUST CSF Risk Mgmt Program: 0.b Risk Assessment"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Operational Framework Failure Threat: HITRUST LUF7 Virtual Parts & Components"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Operational Framework Environmental Threat: ENISA Wildlife"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Actors AND Campaigns: -TMT-"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Backdoor: ACBackdoor"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Botnet: AESDDoS.J"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Ransomware: Anatova"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS Tool: .NET RocketMan Trojan"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS SecTool: .NET Reactor"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS SecTool Type: Account Control"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS CMCF General Artifact Informational Drawback: Information Discrepancy"
+misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS CMCF Author Source Informational Drawback: Information Discrepancy"
+
+
+
+
+
+
