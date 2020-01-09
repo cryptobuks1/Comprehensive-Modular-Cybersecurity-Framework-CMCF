@@ -133,11 +133,11 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Persistence: Azure T1098 Account Manipulation
       OSRS Combined MITRE ATK Persistence: SaaS T1078 Valid Accounts
     Privilege Escalation
-      OSRS Combined MITRE ATK Privilege Escalation Windows: T1134 Access Token Manipulation
-      OSRS Combined MITRE ATK Privilege Escalation Linux: T1068 Exploitation for Privilege Escalation
-      OSRS Combined MITRE ATK Privilege Escalation AWS: T1078 Valid Accounts
-      OSRS Combined MITRE ATK Privilege Escalation GCP: T1078 Valid Accounts
-      OSRS Combined MITRE ATK Privilege Escalation Azure: T1078 Valid Accounts
+      OSRS Combined MITRE ATK Privilege Escalation: Windows T1134 Access Token Manipulation
+      OSRS Combined MITRE ATK Privilege Escalation: Linux T1068 Exploitation for Privilege Escalation
+      OSRS Combined MITRE ATK Privilege Escalation: AWS T1078 Valid Accounts
+      OSRS Combined MITRE ATK Privilege Escalation: GCP T1078 Valid Accounts
+      OSRS Combined MITRE ATK Privilege Escalation: Azure T1078 Valid Accounts
       OSRS Combined MITRE ATK Privilege Escalation SaaS: T1078 Valid Accounts
     Defense Evasion
       OSRS Combined MITRE ATK Defense Evasion Windows: T1134 Access Token Manipulation
@@ -145,7 +145,7 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Defense Evasion AWS: T1108 Redundant Access
       OSRS Combined MITRE ATK Defense Evasion GCP: T1108 Redundant Access
       OSRS Combined MITRE ATK Defense Evasion Azure: T1108 Redundant Access
-      OSRS Combined MITRE ATK Defense Evasion SaaS: T1527 Application Access Token
+      OSRS Combined MITRE ATK Privilege Escalation: SaaS T1078 Valid Accounts
     Credential Access
       OSRS Combined MITRE ATK Credential Access Windows: T1098 Account Manipulation
       OSRS Combined MITRE ATK Credential Access Linux: T1139 Bash History
