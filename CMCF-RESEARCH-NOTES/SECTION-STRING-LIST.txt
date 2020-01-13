@@ -138,7 +138,7 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Privilege Escalation: AWS T1078 Valid Accounts
       OSRS Combined MITRE ATK Privilege Escalation: GCP T1078 Valid Accounts
       OSRS Combined MITRE ATK Privilege Escalation: Azure T1078 Valid Accounts
-      OSRS Combined MITRE ATK Privilege Escalation SaaS: T1078 Valid Accounts
+      OSRS Combined MITRE ATK Privilege Escalation: SaaS T1078 Valid Accounts
     Defense Evasion
       OSRS Combined MITRE ATK Defense Evasion Windows: T1134 Access Token Manipulation
       OSRS Combined MITRE ATK Defense Evasion Linux: T1009 Binary Padding
