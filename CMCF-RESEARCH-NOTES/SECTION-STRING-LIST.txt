@@ -161,9 +161,9 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Discovery: Azure T1538 Cloud Service Dashboard
       OSRS Combined MITRE ATK Discovery: SaaS T1526 Cloud Service Discovery
     Lateral Movement
-      OSRS Combined MITRE ATK Lateral Movement Windows: T1017 Application Deployment Software
-      OSRS Combined MITRE ATK Lateral Movement Linux: T1017 Application Deployment Software
-      OSRS Combined MITRE ATK Lateral Movement SaaS: T1527 Application Access Token
+      OSRS Combined MITRE ATK Lateral Movement: Windows T1017 Application Deployment Software
+      OSRS Combined MITRE ATK Lateral Movement: Linux T1017 Application Deployment Software
+      OSRS Combined MITRE ATK Lateral Movement: SaaS T1527 Application Access Token
     Collection
       OSRS Combined MITRE ATK Collection Windows: T1123 Audio Capture
       OSRS Combined MITRE ATK Collection Linux: T1123 Audio Capture
