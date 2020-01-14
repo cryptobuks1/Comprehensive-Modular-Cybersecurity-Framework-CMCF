@@ -165,12 +165,12 @@ Combined MITRE ATK
       OSRS Combined MITRE ATK Lateral Movement: Linux T1017 Application Deployment Software
       OSRS Combined MITRE ATK Lateral Movement: SaaS T1527 Application Access Token
     Collection
-      OSRS Combined MITRE ATK Collection Windows: T1123 Audio Capture
-      OSRS Combined MITRE ATK Collection Linux: T1123 Audio Capture
-      OSRS Combined MITRE ATK Collection AWS: T1530 Data from Cloud Storage Object
-      OSRS Combined MITRE ATK Collection GCP: T1530 Data from Cloud Storage Object
-      OSRS Combined MITRE ATK Collection Azure: T1530 Data from Cloud Storage Object
-      OSRS Combined MITRE ATK Collection SaaS: T1213 Data from Information Repositories
+      OSRS Combined MITRE ATK Collection: Windows T1123 Audio Capture
+      OSRS Combined MITRE ATK Collection: Linux T1123 Audio Capture
+      OSRS Combined MITRE ATK Collection: AWS T1530 Data from Cloud Storage Object
+      OSRS Combined MITRE ATK Collection: GCP T1530 Data from Cloud Storage Object
+      OSRS Combined MITRE ATK Collection: Azure T1530 Data from Cloud Storage Object
+      OSRS Combined MITRE ATK Collection: SaaS T1213 Data from Information Repositories
     Command and Control
       OSRS Combined MITRE ATK Command and Control Windows: T1043 Commonly Used Port
       OSRS Combined MITRE ATK Command and Control Linux: T1043 Commonly Used Port
