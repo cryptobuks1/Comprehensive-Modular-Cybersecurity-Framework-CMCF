@@ -7,6 +7,8 @@ General Artifact
     OSRS GECI: Federal Administration
   US State Index
     OSRS US State Index: Alabama, AL
+  ENISA SE DB Rating
+    ENISA SE DB Rating: Simple Data
   BLS A thru P
     OSRS BLS: NAICS 721 Accommodation
   BLS Q thru Z
