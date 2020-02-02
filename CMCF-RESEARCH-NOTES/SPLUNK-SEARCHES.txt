@@ -38,3 +38,10 @@ SEARCH FOR A SPECIFIC EVENT AND RETIRIEVE THE ATTRIBUTES
 
 | mispgetioc misp_instance=RESOURCE1 last=2d
 | search misp_event_id=4749
+
+SEARCH THAT TOTALS TEXT VALUE FOR INDIVIDUAL DATA BREACH SEVERITY BY AN INDIVIDUAL EVENT
+
+| mispgetioc misp_instance=RESOURCE1 last=2d
+| search misp_event_id=4749
+| stats sum(misp_text) as TOTAL
+
