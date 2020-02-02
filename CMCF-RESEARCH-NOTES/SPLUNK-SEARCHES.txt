@@ -29,7 +29,12 @@ misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS CMCF General Artifact Informational Drawback
 misp-galaxy:OSRS-CMCF-BLOCK-H="OSRS CMCF Author Source Informational Drawback: Information Discrepancy"
 
 
+SEARCH FOR A SPECIFIC EVENT AND RETIRIEVE THE TAGS
 
+| mispgetevent misp_instance=RESOURCE1 last=2d
+| search misp_event_id=4749
 
+SEARCH FOR A SPECIFIC EVENT AND RETIRIEVE THE ATTRIBUTES
 
-
+| mispgetioc misp_instance=RESOURCE1 last=2d
+| search misp_event_id=4749
