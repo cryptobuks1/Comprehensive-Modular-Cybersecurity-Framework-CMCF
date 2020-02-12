@@ -45,3 +45,8 @@ SEARCH THAT TOTALS TEXT VALUE FOR INDIVIDUAL DATA BREACH SEVERITY BY AN INDIVIDU
 | search misp_event_id=4749
 | stats sum(misp_text) as TOTAL
 
+HOW TO SUM THE VALUES OF OBJECT TEXT
+
+| mispgetioc misp_instance=RESOURCE1 last=2d
+| search misp_event_id=4753
+| stats sum(misp_text) as total_score
