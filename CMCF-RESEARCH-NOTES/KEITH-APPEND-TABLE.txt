@@ -1,0 +1,11 @@
+| mispapireport misp_instance=RESOURCE1 mode=p includeEventTags=true last=7d
+| search misp_tag="osrs-event-type:Data-Breach"
+| stats dc(misp_event_id) by misp_tag
+| rename "dc(misp_event_id)" as "distinct_count"
+| eval timestamp=now()
+| xyseries timestamp misp_tag distinct_count
+| inputlookup append=t your_misp_statistics_lookup_file.csv
+| fillnull value=0
+| stats values(*) AS * by timestamp
+| sort 0 - timestamp
+| outputlookup your_misp_statistics_lookup_file.csv
