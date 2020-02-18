@@ -1,0 +1,401 @@
+<dashboard theme="dark">
+  <label>DEV HITRUST MITRE Backdoor Report</label>
+  <row>
+    <panel>
+      <title>HITRUST CSF FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-HITRUST-CSF*"))
+| replace 
+
+"misp-galaxy:OSRS-HITRUST-CSF=\"11-1_Information_Security_in_Supplier_Relationships\"" WITH "11-1 Information Security in Supplier Relationships",
+"misp-galaxy:OSRS-HITRUST-CSF=\"11-2_Supplier_Service_Delivery_Management\"" WITH "11-2 Supplier Service Delivery Management",
+"misp-galaxy:OSRS-HITRUST-CSF=\"3-2_During_Employment\"" WITH "3-2 During Employment",
+"misp-galaxy:OSRS-HITRUST-CSF=\"4-1_Responsibility_for_Assets\"" WITH "4-1 Responsibility for Assets",
+"misp-galaxy:OSRS-HITRUST-CSF=\"4-2_Information_Classification\"" WITH "4-2 Information Classification",
+"misp-galaxy:OSRS-HITRUST-CSF=\"4-3_Media_Handling\"" WITH "4-3 Media Handling",
+"misp-galaxy:OSRS-HITRUST-CSF=\"5-1_Business_Requirements_for_Access_Control\"" WITH "5-1 Bus Req for Access Ctl",
+"misp-galaxy:OSRS-HITRUST-CSF=\"5-2_User_Access_Management\"" WITH "5-2 User Access Management",
+"misp-galaxy:OSRS-HITRUST-CSF=\"5-3_User_Responsibilities\"" WITH "5-3 User Responsibility",
+"misp-galaxy:OSRS-HITRUST-CSF=\"5-4_System_and_Application_Access_Control\"" WITH "5-4 System &amp; Application Access Control",
+"misp-galaxy:OSRS-HITRUST-CSF=\"7-1_Secure_Areas\"" WITH "7-1 Secure Areas",
+"misp-galaxy:OSRS-HITRUST-CSF=\"7-2_Equipment\"" WITH "7-2 Equipment",
+"misp-galaxy:OSRS-HITRUST-CSF=\"8-2_Malware_Protection\"" WITH "8-2 Malware Protection",
+"misp-galaxy:OSRS-HITRUST-CSF=\"8-5_Control_of_Operational_Software\"" WITH "8-5 Control of Operational Software"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>HITRUST THREAT CATALOGUE FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-HITRUST-TC*"))
+| replace 
+
+"misp-galaxy:OSRS-HITRUST-TC=\"LIC2_Terrorism\"" WITH "LIC2 Terrorism",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIM3_Fraud\"" WITH "LIM3 Fraud",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIM4_Theft\"" WITH "LIM4 Theft",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN1_Abuse_of_authorizations\"" WITH "LIN1 Abuse of Authorizations",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN14_Elevated_Privileges\"" WITH "LIN14 Elevated Privileges",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN16_HTML_script_injection\"" WITH "LIN16 HTML Script Inj",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN25_Masquerade_or_Pretexting\"" WITH "LIN25 Masquerade or Pretexting",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN30_Phishing\"" WITH "LIN30 Phishing",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN32_Ransomware\"" WITH "LIN32 Ransomware",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN44_Spear_phishing\"" WITH "LIN44 Spear Phishing",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN49_Unauthorized_Access\"" WITH "LIN49 Unauthorized Access",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN9_Compromised_Credentials\"" WITH "LIN9 Compromised Creds",
+"misp-galaxy:OSRS-HITRUST-TC=\"LUF1_3rd_Party_Services\"" WITH "LUF1 3rd Party Services",
+"misp-galaxy:OSRS-HITRUST-TC=\"LUM10_Insufficiently_or_Inadequately_following_Release_Procedures\"" WITH "LUM10 Insuficient or Inadequate follow of Release Procedures",
+"misp-galaxy:OSRS-HITRUST-TC=\"LUM7_Improperly_Designing_Information_Systems\"" WITH "LUM7 Improperly Designing Info Systems",
+"misp-galaxy:OSRS-HITRUST-TC=\"LUM8_Improperly_Designing_Network_Infastructure\"" WITH "LUM8 Improperly Designing Network Inf",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN7_Code_Injections\"" WITH "LIN7 Code Injections",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN13_Drive_By_Download\"" WITH "LIN13 Drive-By Download",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN27_Misuse_of_audit_tools\"" WITH "LIN27 Misuse of Audit Tools",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN47_Trojan\"" WITH "LIN47 Trojan",
+"misp-galaxy:OSRS-HITRUST-TC=\"LIN55_Watering_Holes\"" WITH "LIN55 Watering Holes",
+"misp-galaxy:OSRS-HITRUST-TC=\"PIM4_Theft\"" WITH "PIM Theft"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY INITIAL ACCESS FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Initial-Access*"))
+|replace
+
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"Exploit Public-Facing Application T1190\"" WITH "T1190 Exploit Public-Facing App",
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"External Remote Services T1133\"" WITH "T1133 External Remote Services",
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"Spearphishing Link T1192\"" WITH "T1192 Spearphishing Link",
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"Supply Chain Compromise T1195\"" WITH "T1195 Suplly Chain Compromise",
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"Valid Accounts T1078\"" WITH "T1078 Valid Accounts",
+"misp-galaxy:OSRS-MITRE-Initial-Access=\"Drive-by Compromise T1189\"" WITH "T1189 Drive-by Compromise"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY EXECUTION FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Execution*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Execution=\"Execution through API T1106\"" WITH "T1106 Execution through API",
+"misp-galaxy:OSRS-MITRE-Execution=\"PowerShell T1086\"" WITH "T1086 Powershell",
+"misp-galaxy:OSRS-MITRE-Execution=\"Scripting T1064\"" WITH "T1064 Scripting",
+"misp-galaxy:OSRS-MITRE-Execution=\"Service Execution T1035\"" WITH "T1035 Service Execution",
+"misp-galaxy:OSRS-MITRE-Execution=\"Execution through Module Load T1129\"" WITH "T1129 Execution through Module Load",
+"misp-galaxy:OSRS-MITRE-Execution=\"Exploitation for Client Execution T1203\"" WITH "T1203 Exploit for Client Execution",
+"misp-galaxy:OSRS-MITRE-Execution=\"Regsvcs OR Regasm T1121\"" WITH "T1121 Regsvcs OR Regasm",
+"misp-galaxy:OSRS-MITRE-Execution=\"Regsvr32 T1117\"" WITH "T1117 Regsvr32",
+"misp-galaxy:OSRS-MITRE-Execution=\"Rundll32 T1085\"" WITH "T1085 Rundll32", 
+"misp-galaxy:OSRS-MITRE-Execution=\"Scheduled Task T1053\"" WITH "T1053 Scheduled Task"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY PERSISTENCE FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Persistence*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Persistence=\"Valid Accounts T1078\"" WITH "T1078 Valid Accounts",
+"misp-galaxy:OSRS-MITRE-Persistence=\"BITS Jobs T1197\"" WITH "T1197 BITS Jobs",
+"misp-galaxy:OSRS-MITRE-Persistence=\"DLL Search Order Hijacking T1038\"" WITH "T1038 DLL Search Order Hijacking",
+"misp-galaxy:OSRS-MITRE-Persistence=\"Hooking T1179\"" WITH "T1179 Hooking",
+"misp-galaxy:OSRS-MITRE-Persistence=\"Registry Run Keys OR Startup Folder T1060\"" WITH "T1060 Registry Run Keys OR Startup Folder",
+"misp-galaxy:OSRS-MITRE-Persistence=\"Scheduled Task T1053\"" WITH "T1053 Scheduled Task",
+"misp-galaxy:OSRS-MITRE-Persistence=\"Startup Items T1165\"" WITH "T1165 Starup Items"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY PRIVILEGE ESCALATION FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Privilege-Escalation*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Privilege-Escalation=\"DLL Search Order Hijacking T1038\"" WITH "T1038 DLL Search Order Hijacking",
+"misp-galaxy:OSRS-MITRE-Privilege-Escalation=\"Exploitation for Privilege Escalation T1068\"" WITH "T1068 Exploit for Priv Escalation",
+"misp-galaxy:OSRS-MITRE-Privilege-Escalation=\"Hooking T1179\"" WITH "T1179 Hooking",
+"misp-galaxy:OSRS-MITRE-Privilege-Escalation=\"Scheduled Task T1053\"" WITH "T1053 Scheduled Task"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY DEFENSIVE EVASION FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Defensive-Evasion*"))
+
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY CREDENTIAL ACCESS FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Credential-Access*"))
+
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY DISCOVERY FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Discovery*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Discovery=\"Account Discovery T1087\"" WITH "T1087 Account Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"File and Directory Discovery T1083\"" WITH "T1083 File and Directory Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"Network Share Discovery T1135\"" WITH "T1135 Network Share Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"Process Discovery T1057\"" WITH "T1057 Process Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"Security Software Discovery T1063\"" WITH "T1063 Sec Software Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"System Information Discovery T1082\"" WITH "T1082 System Info Discovery",
+"misp-galaxy:OSRS-MITRE-Discovery=\"Remote System Discovery T1018\"" WITH "T1018 Remote System Discovery"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY LATERAL MOVEMENT FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Lateral-Movement*"))
+
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY COLLECTION FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Collection*"))
+| replace 
+
+"misp-galaxy:OSRS-MITRE-Collection=\"Data from Information Repositories T1213\"" WITH "T1213 Data From Info Repositories",
+"misp-galaxy:OSRS-MITRE-Collection=\"Data from Network Shared Drive T1039\"" WITH "T1039 Data from Network Share Drive",
+"misp-galaxy:OSRS-MITRE-Collection=\"Data from Removable Media T1025\"" WITH "T1025 Data from Removable Media",
+"misp-galaxy:OSRS-MITRE-Collection=\"Email Collection T1114\"" WITH "T1114 Email Collection"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY COMMAND AND CONTROL FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Command-and-Control*"))
+|replace 
+
+"misp-galaxy:OSRS-MITRE-Command-and-Control=\"Standard Application Layer Protocol T1071\"" WITH "T1071 Std App Layer Protocol",
+"misp-galaxy:OSRS-MITRE-Command-and-Control=\"Connection Proxy T1090\"" WITH "T1090 Connection Proxy",
+"misp-galaxy:OSRS-MITRE-Command-and-Control=\"Data Encoding T1132\"" WITH "T1132 Data Encoding",
+"misp-galaxy:OSRS-MITRE-Command-and-Control=\"Data Obfuscation T1001\"" WITH "T1001 Data Obfuscation",
+"misp-galaxy:OSRS-MITRE-Command-and-Control=\"Standard Cryptographic Protocol T1032\"" WITH "T1032 Std Crypto Protocol"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY EXFILTRATION FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Exfiltration*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Exfiltration=\"Exfiltration Over Physical Medium T1052\"" WITH "T1052 Exfil Over Physical Medium",
+"misp-galaxy:OSRS-MITRE-Exfiltration=\"Exfiltration Over Command and Control Channel T1041\"" WITH "T1041 Exfil over C2 Channel"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+    <panel>
+      <title>MITRE ATT&amp;CK CATEGORY IMPACT FREQUENCY ANALYSIS</title>
+      <chart>
+        <title>14 Day Test</title>
+        <search>
+          <query>| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Backdoor"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:OSRS-MITRE-Impact*"))
+| replace
+
+"misp-galaxy:OSRS-MITRE-Impact=\"Runtime Data Manipulation T1494\"" WITH "T1494 Runtime Data Manipulation",
+"misp-galaxy:OSRS-MITRE-Impact=\"Stored Data Manipulation T1492\"" WITH "T1492 Stored Data Manipulation",
+"misp-galaxy:OSRS-MITRE-Impact=\"Data Destruction T1485\"" WITH "T1485 Data Destruction",
+"misp-galaxy:OSRS-MITRE-Impact=\"Data Encrypted for Impact T1486\"" WITH "T1486 Data Encrypted for Impact"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+        </search>
+        <option name="charting.chart">pie</option>
+        <option name="charting.drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </chart>
+    </panel>
+  </row>
+</dashboard>
