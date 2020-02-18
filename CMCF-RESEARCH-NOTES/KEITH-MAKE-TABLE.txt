@@ -1,0 +1,11 @@
+| mispgetevent misp_instance=RESOURCE1 last=7d
+| search misp_tag="osrs-event-type:Data-Breach US"
+| stats dc(misp_event_id) by misp_tag
+| rename "dc(misp_event_id)" as "distinct_count"
+| fieldformat timestamp = strftime(timestamp, "%m/%d/%y")
+| eval timestamp=now()
+| xyseries timestamp misp_tag distinct_count
+| fillnull value=0
+| stats values(*) AS * by timestamp
+| sort 0 - timestamp
+| outputlookup your_misp_statistics_lookup_file.csv
