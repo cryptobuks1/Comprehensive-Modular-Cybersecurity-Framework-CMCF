@@ -50,3 +50,9 @@ HOW TO SUM THE VALUES OF OBJECT TEXT
 | mispgetioc misp_instance=RESOURCE1 last=2d
 | search misp_event_id=4753
 | stats sum(misp_text) as total_score
+
+COUNT TAG OCCURENCES BY UNIQUE EVENTS FOUND CONTAINING THE TAG
+
+| mispgetevent misp_instance=RESOURCE1 last=10d
+| search misp_event_id=4752
+| stats dc(misp_event_id) by misp_tag
