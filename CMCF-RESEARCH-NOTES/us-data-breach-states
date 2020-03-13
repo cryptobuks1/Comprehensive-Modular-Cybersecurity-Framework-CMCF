@@ -1,0 +1,19 @@
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Artifact Type: Data Breach (US)\""
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index::*"))
+| replace
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Washington, WA\"" WITH "Washington, WA"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: New York, NY\"" WITH "New York, NY"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: California, CA\"" WITH "California, CA"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Colorado, CO\"" WITH "Colorado, CO"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Connecticut, CT\"" WITH "Connecticut, CT"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Florida, FL\"" WITH "Florida, FL"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Illinois, IL\"" WITH "Illinois, IL"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Nevada, NV\"" WITH "Nevada, NV"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: North Carolina, NC\"" WITH "North Carolina, NC"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: South Carolina, SC\"" WITH "South Carolina, SC"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS US State Index: Texas, TX\"" WITH "Texas, TX"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
