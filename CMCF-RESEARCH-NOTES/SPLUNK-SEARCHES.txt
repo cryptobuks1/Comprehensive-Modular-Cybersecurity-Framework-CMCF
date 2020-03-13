@@ -67,3 +67,6 @@ ISOLATE OUT HITRUST CSF
 | sort - dc(misp_event_id)
 
 
+REPLACE
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS HITRUST CSF Access Control: 05.a Access Control\"" WITH "Access Control: 05.a Access Control"
