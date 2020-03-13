@@ -1,0 +1,14 @@
+| mispgetevent misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Artifact Type: Data Breach (US)\""
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI:*"))
+| replace
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI: Business-Email-Compromise(BEC)\"" WITH "Business-Email-Compromise(BEC)"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI: Ransomware\"" WITH "Ransomware"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI: Phishing Scam\"" WITH "Phishing Scam"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI: Insider\"" WITH "Insider"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS GDBI: Unauthorized Third-party\"" WITH "Unauthorized Third-party"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
