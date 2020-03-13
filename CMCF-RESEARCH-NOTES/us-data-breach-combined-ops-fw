@@ -1,0 +1,29 @@
+| mispgetevent misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Artifact Type: Data Breach (US)\""
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework*"))
+| replace
+
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Compromising Confidential Information (Data Breaches)\"" WITH "Nefarious Threat: ENISA Compromising Confidential Information (Data Breaches)"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: HITRUST LIN49 Unauthorized Access\"" WITH "Nefarious Threat: HITRUST LIN49 Unauthorized Access"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Malicious Code, Software, or Activity\"" WITH "Nefarious Threat: ENISA Malicious Code, Software, or Activity"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: HITRUST LIN32 Ransomware\"" WITH "Nefarious Threat: HITRUST LIN32 Ransomware"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Abuse of Authorizations\"" WITH "Nefarious Threat: ENISA Abuse of Authorizations"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Identity Theft, Identity Fraud, or Account Abuse\"" WITH "Nefarious Threat: ENISA Identity Theft, Identity Fraud, or Account Abuse"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: HITRUST LIN1 Abuse of Authorizations\"" WITH "Nefarious Threat: HITRUST LIN1 Abuse of Authorizations"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Social Engineering\"" WITH "Nefarious Threat: ENISA Social Engineering"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: ENISA Inadequate Design and Planning or Improper Adaptation\"" WITH "Human Threat: ENISA Inadequate Design and Planning or Improper Adaptation"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST LUM7 Improperly Designing Information Systems\"" WITH "Human Threat: HITRUST LUM7 Improperly Designing Information Systems"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: ENISA Unauthorized Activities\"" WITH "Nefarious Threat: ENISA Unauthorized Activities"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: ENISA Loss of or Integrity of Sensitive Information\"" WITH "Human Threat: ENISA Loss of or Integrity of Sensitive Information"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST LIM4 Theft\"" WITH "Human Threat: HITRUST LIM4 Theft"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST LUH2 Improper Data Modification.\"" WITH "Human Threat: HITRUST LUH2 Improper Data Modification"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST LUM16 Unacceptable Use\"" WITH "Human Threat: HITRUST LUM16 Unacceptable Use"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST PIM4 Theft\"" WITH "Human Threat: HITRUST PIM4 Theft"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Human Threat: HITRUST PUH4 Loss of IT Assets\"" WITH "Human Threat: HITRUST PUH4 Loss of IT Assets"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: HITRUST LIN9 Compromised Credentials\"" WITH "Nefarious Threat: HITRUST LIN9 Compromised Credentials"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Operational Framework Nefarious Threat: HITRUST LIN30 Phishing\"" WITH "Nefarious Threat: HITRUST LIN30 Phishing"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
