@@ -1,0 +1,40 @@
+| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Data-Breach"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK*"))
+| replace
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Direction: T1237 Submit KITs, KIQs, and intelligence requirements\"" WITH "T1237 Submit KITs, KIQs, and intelligence requirements"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1224 Assess leadership areas of interest\"" WITH "T1224 Assess leadership areas of interest"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1226 Conduct cost-benefit analysis\"" WITH "T1226 Conduct cost-benefit analysis"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Target Selection: T1241 Determine strategic target\"" WITH "T1241 Determine strategic target"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Target Selection: T1242 Determine operational element\"" WITH "T1242 Determine operational element"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Target Selection: T1243 Determine highest level tactical element\"" WITH "T1243 Determine highest level tactical element"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Establish & Maintain Infrastructure: T1335 Procure required equipment and software\"" WITH "T1335 Procure required equipment and software"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Establish & Maintain Infrastructure: T1336 Install and configure hardware, network, and systems\"" WITH "T1336 Install and configure hardware, network, and systems"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Direction: T1238 Assign KITs, KIQs, and(or) intelligence requirements\"" WITH "T1238 Assign KITs, KIQs, and(or) intelligence requirements"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Direction: T1240 Task requirements\"" WITH "T1240 Task requirements"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1227 Develop KITs OR KIQs\"" WITH "T1227 Develop KITs OR KIQs"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1228 Assign KITs OR KIQs into categories\"" WITH "T1228 Assign KITs OR KIQs into categories"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1231 Create strategic plan\"" WITH "T1231 Create strategic plan"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1232 Create implementation plan\"" WITH "T1232 Create implementation plan"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1236 Assess current holdings, needs, and wants\"" WITH "T1236 Assess current holdings, needs, and wants"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Information Gathering: T1254 Conduct active scanning\"" WITH "T1254 Conduct active scanning"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Information Gathering: T1255 Discover target logon and (or) email address format\"" WITH "T1255 Discover target logon and (or) email address format"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Weakness Identification: T1288 Analyze architecture and configuration posture\"" WITH "T1288 Analyze architecture and configuration posture"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Weakness Identification: T1293 Analyze application security posture\"" WITH "T1293 Analyze application security posture"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Build Capabilities: T1348 Identify resources required to build capabilities\"" WITH "T1348 Identify resources required to build capabilities"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Direction: T1239 Receive KITs OR KIQs and determine requirements\"" WITH "T1239 Receive KITs OR KIQs and determine requirements"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Priority Definition Planning: T1230 Derive intelligence requirements\"" WITH "T1230 Derive intelligence requirements"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Information Gathering: T1250 Determine domain and IP address space\"" WITH "T1250 Determine domain and IP address space"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Information Gathering: T1253 Conduct passive scanning\"" WITH "T1253 Conduct passive scanning"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Information Gathering: T1260 Determine 3rd party infrastructure services\"" WITH "T1260 Determine 3rd party infrastructure services"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Weakness Identification: T1287 Analyze data collected\"" WITH "T1287 Analyze data collected"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS MITRE Pre-ATK Technical Weakness Identification: T1291 Research relevant vulnerabilities and (or) CVEs\"" WITH "T1291 Research relevant vulnerabilities and (or) CVEs"
+
+
+
+
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
