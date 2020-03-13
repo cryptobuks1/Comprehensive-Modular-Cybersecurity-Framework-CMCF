@@ -56,3 +56,14 @@ COUNT TAG OCCURENCES BY UNIQUE EVENTS FOUND CONTAINING THE TAG
 | mispgetevent misp_instance=RESOURCE1 last=10d
 | search misp_event_id=4752
 | stats dc(misp_event_id) by misp_tag
+
+
+ISOLATE OUT HITRUST CSF
+
+| mispgetevent misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Artifact Type: Data Breach (US)\""
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS HITRUST CSF*"))
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
+
+
