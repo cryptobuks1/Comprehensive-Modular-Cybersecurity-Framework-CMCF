@@ -1,0 +1,14 @@
+| mispgetevent misp_instance=RESOURCE1 last=14d
+| search misp_tag="osrs-event-type:Data-Breach"
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK*"))
+| replace
+
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK Collection: AWS T1530 Data from Cloud Storage Object\"" WITH "Collection: AWS T1530 Data from Cloud Storage Object"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK Defense Evasion: AWS T1078 Valid Accounts\"" WITH "Defense Evasion: AWS T1078 Valid Accounts"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK Discovery: AWS T1018 Remote System Discovery\"" WITH "ATK Discovery: AWS T1018 Remote System Discovery"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK Initial Access: AWS T1190 Exploit Public-Facing Application\"" WITH "Initial Access: AWS T1190 Exploit Public-Facing Application"
+"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Combined MITRE ATK Privilege Escalation: AWS T1078 Valid Accounts\"" WITH "Privilege Escalation: AWS T1078 Valid Accounts"
+
+in misp_tag
+| stats dc(misp_event_id) by misp_tag
+| sort - dc(misp_event_id)
