@@ -1,0 +1,26 @@
+AVERAGE
+
+| mispgetioc misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"ENISA DB SE Rating: Total Severity Rating\""
+| table misp_tag misp_text
+| stats avg(misp_text)
+
+LIST ALL
+
+| mispgetioc misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"ENISA DB SE Rating: Total Severity Rating\""
+| table misp_tag misp_text
+
+MAX VAL
+
+| mispgetioc misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"ENISA DB SE Rating: Total Severity Rating\""
+| table misp_tag misp_text
+| stats max(misp_text)
+
+MIN VAL
+
+| mispgetioc misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"ENISA DB SE Rating: Total Severity Rating\""
+| table misp_tag misp_text
+| stats min(misp_text)
