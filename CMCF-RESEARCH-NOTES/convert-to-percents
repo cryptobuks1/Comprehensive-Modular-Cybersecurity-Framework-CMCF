@@ -1,0 +1,10 @@
+| mispgetevent misp_instance=RESOURCE1 last=7d
+| search misp_tag="misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS Artifact Type: Data Breach (US)\""
+| eval misp_tag=mvfilter(match(misp_tag,"misp-galaxy:CMCF-BLOCK-OSRS=\"OSRS HITRUST CSF*"))
+
+| stats dc(misp_event_id) AS events by misp_tag
+| sort - events
+| eventstats total=sum(events)
+| eval percent=events/total
+| head 10
+| fieldformat percent=round(100*percent,2)
